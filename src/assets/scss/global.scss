@@ -4,14 +4,16 @@
 
 /**** palette ****/
 $primary-blue: #334453;
+$secondary-blue: #447991;
+
 $primary-red: #EC4658;
 $secondary-gray: #DDE6EB;
 
 $hover-primary: #E53D48;
 $hover-secondary: #46C197;
 
-$text-paragraph-dark: #555C6B;
-$text-paragraph-light: #BBBCBD;
+$text-dark: #555C6B;
+$text-light: #a0a0a0;
 
 /**** globals ****/
 *{
@@ -24,64 +26,21 @@ html{
     font-family: 'Roboto',  sans-serif;
 }
 
-/**** utilities ****/
-/* width */
-w-20{
-    width: 20%;
+li{
+    list-style: none;
 }
 
-w-40{
-    width: 40%;
-}
-
-w-60{
-    width: 60%;
-}
-
-w-80{
-    width: 80%;
-}
-
-w-100{
-    width: 100%;
-}
-
-/* flex box */
-.d-flex{
-    display: flex;
-}
-
-.flex-row{
-    flex-direction: row;
-}
-
-.flex-col{
-    flex-direction: column;
-}
-
-.flex-content-center{
-    justify-content: center;
-}
-
-.flex-content-between{
-    justify-content: space-between;
-}
-
-.flex-content-between{
-    justify-content: space-between;
-}
-
-.flex-align-center{
-    align-items: center;
+a{
+    text-decoration: none;
 }
 
 /**** buttons ****/
 .btn{
-    padding: 12px 14px;
+    padding: 15px 20px;
     cursor: pointer;
-    border-radius: 12px;
+    border-radius: 30px;
     font-weight: 500;
-    font-size: 1.1em;
+    font-size: 0.8em;
     text-align: center;
     text-transform: uppercase;
 
@@ -93,7 +52,8 @@ w-100{
 
 .btn-red{
     border: 1px solid $primary-red;
-    background-color: 1px solid $primary-red;
+    background-color: $primary-red;
+    color: #fff;
 
     &:hover{
         background-color: $hover-primary;
@@ -135,11 +95,11 @@ h4{
 }
 
 .text-secondary-dark{
-    color: $text-paragraph-dark;
+    color: $text-dark;
 }
 
-.text-primary-light{
-    color: $text-paragraph-light;
+.text-light{
+    color: $text-light;
 }
 
 .text-white{
