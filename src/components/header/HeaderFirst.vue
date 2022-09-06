@@ -16,7 +16,7 @@
             </div>
         </div>
         <div class="col-9 h-100">
-            <ul class="navigation-menu d-flex flex-lg-content-end flex-content-center ">
+            <ul class="navigation-menu d-flex flex-content-end">
                 <li lass="nav-item" v-for="(link, i) in navigationLinks" :key="i">
                     <a class="nav-link text-light" :href="link.url">{{ link.name }}</a>
                 </li>
