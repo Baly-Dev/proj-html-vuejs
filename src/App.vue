@@ -7,7 +7,7 @@
 
 <script>
 import TheHeader from './components/header/TheHeader.vue'
-import TheMain from './components/TheMain.vue'
+import TheMain from './components/main/TheMain.vue'
 export default {
   name: 'App',
   components:{
