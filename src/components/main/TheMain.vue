@@ -3,13 +3,15 @@
         <MainFirstSection />
         <MainSecondSection 
         :developmentCourses="developmentCourses"
-        />        
+        />
+        <MainThirdSection />      
     </main>
 </template>
 
 <script>
 import MainFirstSection from './MainFirstSection.vue'
 import MainSecondSection from './MainSecondSection.vue';
+import MainThirdSection from './MainThirdSection.vue';
 export default {
     name: 'TheMain',
     props:{
@@ -17,7 +19,8 @@ export default {
     },
     components:{
         MainFirstSection,
-        MainSecondSection
+        MainSecondSection,
+        MainThirdSection
     }
 }
 </script>

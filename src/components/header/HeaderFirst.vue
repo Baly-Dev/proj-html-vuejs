@@ -36,21 +36,18 @@
 </template>
 
 <script>
-    export default {
-        name: 'HeaderFirst',
-        data(){
-            return{
-                showLanguages: false,
-            }
-        },
-        props:{
-            navigationLinks: Array,
-            socialLikns: Array,
-        },
-        methods:{
-
+export default {
+    name: 'HeaderFirst',
+    data(){
+        return{
+            showLanguages: false,
         }
+    },
+    props:{
+        navigationLinks: Array,
+        socialLikns: Array,
     }
+}
 </script>
 
 <style scoped lang="scss">

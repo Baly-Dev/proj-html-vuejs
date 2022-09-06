@@ -54,18 +54,18 @@
 </div>
 </template>
 
-<script>
-    export default {
-        name: 'HeaderSecond',
-        data(){
-            return{
-                showCategories: false
-            }
-        },
-        props:{
-            categories: Array,
+<script>   
+export default {
+    name: 'HeaderSecond',
+    data(){
+        return{
+            showCategories: false
         }
+    },
+    props:{
+        categories: Array,
     }
+}
 </script>
 
 <style scoped lang="scss">
