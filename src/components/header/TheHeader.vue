@@ -40,22 +40,16 @@ export default {
                 {class:"linkedin", url:'#'},
                 {class:"google-plus", url:'#'},
                 {class:"youtube", url:'#'}
-            ],
-            categories:[
-                {name: 'Business', class:'chart-line'},
-                {name: 'Design', class:'palette'},
-                {name: 'Development', class:'gear'},
-                {name: 'Lifestyle', class:'face-smile'},
-                {name: 'Office Productivity', class:'print'}
-            ],
-            mobile: null,
-            windowWidth: null
+            ]
         }
     },
+    props:{
+        categories: Array
+    },
     components:{
-    HeaderFirst,
-    HeaderSecond,
-    HeaderThird
+        HeaderFirst,
+        HeaderSecond,
+        HeaderThird
 }
 }
 </script>

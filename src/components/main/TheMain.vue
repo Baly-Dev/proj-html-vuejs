@@ -1,15 +1,23 @@
 <template>
     <main>
-        <MainFirst />
+        <MainFirstSection />
+        <MainSecondSection 
+        :developmentCourses="developmentCourses"
+        />        
     </main>
 </template>
 
 <script>
-import MainFirst from './MainFirst.vue'
+import MainFirstSection from './MainFirstSection.vue'
+import MainSecondSection from './MainSecondSection.vue';
 export default {
     name: 'TheMain',
+    props:{
+        developmentCourses: Array
+    },
     components:{
-        MainFirst
+        MainFirstSection,
+        MainSecondSection
     }
 }
 </script>

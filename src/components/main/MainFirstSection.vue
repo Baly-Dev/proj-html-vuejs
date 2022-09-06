@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="firstSection">
         <div class="container">
             <div class="row">
                 <div class="col-5 left">
@@ -16,7 +16,7 @@
 
 <script>
     export default {
-        name: "MainFirst"
+        name: "MainFirstSection"
     }
 </script>
 
