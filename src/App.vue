@@ -8,12 +8,15 @@
     :courses="courses"
     :categories="categories"
     />
+    <TheFooter />
   </div>
 </template>
 
 <script>
 import TheHeader from './components/header/TheHeader.vue'
 import TheMain from './components/main/TheMain.vue'
+import TheFooter from './components/TheFooter.vue'
+
 export default {
   name: 'App',
   data(){
@@ -163,7 +166,8 @@ export default {
   },
   components:{
     TheHeader,
-    TheMain
+    TheMain,
+    TheFooter
   },
   created(){
     this.courseActualPrice()
