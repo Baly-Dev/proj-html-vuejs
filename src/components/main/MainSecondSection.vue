@@ -3,7 +3,7 @@
         <div class="container-large">
             <div class="row">
                 <div class="col-12">
-                    <h3>Popular Development Courses</h3>
+                    <h2 class="text-primary-dark">Popular Development Courses</h2>
                 </div>
             </div>
             <div class="row card-group">

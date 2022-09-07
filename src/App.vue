@@ -5,6 +5,8 @@
     />
     <TheMain 
     :developmentCourses="developmentCourses"
+    :courses="courses"
+    :categories="categories"
     />
   </div>
 </template>
@@ -17,13 +19,14 @@ export default {
   data(){
     return{
       categories:[
-        {name: 'Business', class:'chart-line'},
-        {name: 'Design', class:'palette'},
-        {name: 'Development', class:'gear'},
-        {name: 'IT & Software ', class:'terminal'},
-        {name: 'Lifestyle', class:'face-smile'},
-        {name: 'Marketing', class:'bullseye-arrow'},
-        {name: 'Office Productivity', class:'print'}
+        {name: 'All Categories', icon:'', status: true},
+        {name: 'Business', icon:'chart-line', status: false},
+        {name: 'Design', icon:'palette', status: false},
+        {name: 'Development', icon:'gear',status: false},
+        {name: 'IT & Software ', icon: 'terminal', status: false},
+        {name: 'Lifestyle', icon: 'face-smile', status: false},
+        {name: 'Marketing', icon: 'bullseye', status: false},
+        {name: 'Office Productivity', icon: 'print', status: false}
       ],
       courses:[
         {
@@ -60,7 +63,7 @@ export default {
         },
         {
             title: 'Become an Arabic Calligraphy Artist from Scratch',
-            cover: '1208228_d61c_4-272x161.jpg',
+            cover: '186792_41e4_4-272x161.jpg',
             category: 'Art & Crafts',
             sale: 0,
             price: 199.99,
@@ -116,7 +119,7 @@ export default {
         },
         {
             title: 'Mastering Brushstrokes - Part 1',
-            cover: '1109398_4c13-272x161.jpg',
+            cover: '1414956_d944_15-272x161.jpg',
             category: 'Art & Crafts',
             sale: 50,
             price: 19.99,
@@ -155,7 +158,7 @@ export default {
             rank: 4
         }
       ],
-      developmentCourses:[]
+      developmentCourses:[],
     }
   },
   components:{
@@ -165,6 +168,7 @@ export default {
   created(){
     this.courseActualPrice()
     this.filterDevelopmentCourses()
+    this.activeCategory()
   },
   methods:{
     courseActualPrice(){
@@ -187,6 +191,13 @@ export default {
       })
       console.log(this.developmentCourses)
       return this.developmentCourses
+    },
+    activeCategory(){
+      this.categories.forEach(category => {
+        if (category.status){
+          category.class = 'active'
+        }
+      })
     }
   }
 }

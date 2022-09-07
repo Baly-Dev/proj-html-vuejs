@@ -3,7 +3,7 @@
         <div class="row container">
             <div class="col-5 left">
                 <div>
-                    <h2>Limitless learning, more Possibilities</h2>
+                    <h2 class="text-primary-dark">Limitless learning, more Possibilities</h2>
                     <p>Online courses open the opportunity to learning to almost anyone, regardless of their scheduling commitment</p>
                 </div>
                 <a class="btn btn-red" href="">Read More</a>

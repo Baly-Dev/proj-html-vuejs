@@ -11,7 +11,7 @@
         <div class="card-footer d-flex flex-content-between">
             <div class="ranking">
                 <img v-for="n in course.rank" :key="n" src="@/assets/img/starfull.svg" alt="">
-                <img v-for="n in 5 - course.rank" :key="n" src="@/assets/img/staremptyl.svg" alt="">
+                <img v-for="n in 5 - course.rank" :key="n + course.rank" src="@/assets/img/staremptyl.svg" alt="">
             </div>
             <div class="prices">
                 <div class="d-flex flex-col" v-if="course.sale > 0">

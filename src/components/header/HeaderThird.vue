@@ -3,8 +3,8 @@
 <div class="third">
     <div class="row container-large flex-align-center  flex-content-center h-100">
         <div class="categories-box d-flex flex-align-center flex-content-center">
-            <div v-for="(category, i) in categories" :key="i" class="icon-btn">
-                <i :class="'text-white fa-solid fa-' + category.class"></i>
+            <div v-for="(category, i) in categories.slice(1)" :key="i" class="icon-btn">
+                <i :class="'text-white fa-solid fa-' + category.icon"></i>
                 <a class="text-white empty-btn" href="#">{{ category.name }}</a>
             </div>
         </div>

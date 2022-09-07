@@ -4,7 +4,11 @@
         <MainSecondSection 
         :developmentCourses="developmentCourses"
         />
-        <MainThirdSection />      
+        <MainThirdSection />   
+        <MainFourthSection
+        :courses="courses"
+        :categories="categories"
+        />      
     </main>
 </template>
 
@@ -12,15 +16,20 @@
 import MainFirstSection from './MainFirstSection.vue'
 import MainSecondSection from './MainSecondSection.vue';
 import MainThirdSection from './MainThirdSection.vue';
+import MainFourthSection from './MainFourthSection.vue';
+
 export default {
     name: 'TheMain',
     props:{
-        developmentCourses: Array
+        developmentCourses: Array,
+        courses: Array,
+        categories: Array
     },
     components:{
         MainFirstSection,
         MainSecondSection,
-        MainThirdSection
+        MainThirdSection,
+        MainFourthSection
     }
 }
 </script>
