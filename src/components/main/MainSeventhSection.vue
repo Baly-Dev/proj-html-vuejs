@@ -43,7 +43,7 @@ section{
     .card{
         width: calc((100% / 2) - 20px);
         border: 1px solid $secondary-gray;
-        padding: 30px 40px;
+        padding: 50px 40px;
         gap: 35px;
 
         h3{
