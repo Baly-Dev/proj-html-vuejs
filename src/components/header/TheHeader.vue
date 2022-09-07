@@ -24,6 +24,10 @@ import HeaderSecond from './HeaderSecond.vue'
 import HeaderThird from './HeaderThird.vue'
 export default {
     name: 'TheHeader',
+    props:{
+        categories: Array,
+        socialLikns: Array
+    },
     data(){
         return{
             navigationLinks:[
@@ -32,19 +36,8 @@ export default {
                 {name: 'Course Formats', url: '#'},
                 {name: 'Courses', url: '#'},
                 {name: 'Demos', url: '#'}
-            ],
-            socialLikns:[
-                {class:"facebook", url:'#'},
-                {class:"twitter", url:'#'},
-                {class:"instagram", url:'#'},
-                {class:"linkedin", url:'#'},
-                {class:"google-plus", url:'#'},
-                {class:"youtube", url:'#'}
             ]
         }
-    },
-    props:{
-        categories: Array
     },
     components:{
         HeaderFirst,

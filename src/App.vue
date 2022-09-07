@@ -2,13 +2,16 @@
   <div id="app" class="main">
     <TheHeader 
     :categories="categories"
+    :socialLikns="socialLikns"
     />
     <TheMain 
     :developmentCourses="developmentCourses"
     :courses="courses"
     :categories="categories"
     />
-    <TheFooter />
+    <TheFooter 
+    :socialLikns="socialLikns"
+    />
   </div>
 </template>
 
@@ -162,6 +165,14 @@ export default {
         }
       ],
       developmentCourses:[],
+      socialLikns:[
+        {class:"facebook", url:'#', color:'fb'},
+        {class:"twitter", url:'#', color:'tw'},
+        {class:"instagram", url:'#', color:'ig'},
+        {class:"linkedin", url:'#', color:'in'},
+        {class:"google-plus", url:'#', color:'gp'},
+        {class:"youtube", url:'#', color:'yt'}
+      ]
     }
   },
   components:{

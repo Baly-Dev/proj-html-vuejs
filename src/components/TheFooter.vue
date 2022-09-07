@@ -19,6 +19,14 @@
             </div>
             <div class="col-3">
                 <div class="footer-item">
+                    <h4 class="text-white">Social</h4>
+                    <div class="social-items">
+                        <li v-for="(social, i) in socialLikns" :key="i" :class="'social-item ' + social.color">
+                            <a class="text-white" :href="social.url">
+                                <i :class="'text-white fa-brands fa-' + social.class"></i>
+                            </a>
+                        </li>
+                    </div>
                 </div>
             </div>
             <div class="col-3">
@@ -32,7 +40,7 @@
         <div class="container row h-100">
             <div class="d-flex flex-align-center">
                 <img src="@/assets/img/footer-logo2x-50x56.png" alt="">
-                <small class="text-white">Copyright © lorem ipsum dolor sit amet.</small>
+                <small class="text-white">Copyright © 2022. Lorem ipsum dolor sit amet.</small>
             </div>
         </div>
     </div>
@@ -41,7 +49,10 @@
 
 <script>
 export default {
-    name: 'TheFooter'
+    name: 'TheFooter',
+    props:{
+        socialLikns: Array
+    }
 }
 </script>
 
@@ -55,7 +66,7 @@ background-color: $primary-blue;
 .first{
     border-bottom: 1px solid $secondary-gray;
     padding: 30px 0px;
-    
+
     .footer-item{
         padding: 15px;
 
@@ -73,6 +84,57 @@ background-color: $primary-blue;
         img{
             width: 100%;
             object-fit: cover;
+        }
+    }
+
+    .fb{
+        background-color: #3C5998;
+        color: #fff;
+    }
+
+    .ig{
+        background-color: #C12BA3;
+        color: #fff;
+    }
+
+    .in{
+        background-color: #0277B5;
+        color: #fff;
+    }
+
+    .tw{
+        background-color: #1EA1F1;
+        color: #fff;
+    }
+
+    .gp{
+        background-color: #DB4637;
+        color: #fff;
+    }
+
+    .yt{
+        background-color: #BD0B1C;
+        color: #fff;
+    }
+
+    .social-items{
+        display: flex;
+        flex-wrap: wrap;
+
+        .social-item{
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+            i{
+                font-size: 1.8em;
+            }
         }
     }
 }
