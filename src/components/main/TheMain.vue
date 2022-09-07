@@ -10,6 +10,9 @@
         :categories="categories"
         />
         <MainFifthSection />
+        <MainSixthSection
+        :courses="courses"
+        />
     </main>
 </template>
 
@@ -19,6 +22,7 @@ import MainSecondSection from './MainSecondSection.vue';
 import MainThirdSection from './MainThirdSection.vue';
 import MainFourthSection from './MainFourthSection.vue';
 import MainFifthSection from './MainFifthSection.vue';
+import MainSixthSection from './MainSixthSection.vue';
 
 export default {
     name: 'TheMain',
@@ -32,11 +36,8 @@ export default {
         MainSecondSection,
         MainThirdSection,
         MainFourthSection,
-        MainFifthSection
+        MainFifthSection,
+        MainSixthSection
     }
 }
 </script>
-
-<style>
-
-</style>
