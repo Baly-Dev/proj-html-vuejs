@@ -21,9 +21,10 @@
                     </div>
                 </div>
                 <div class="col-10 d-flex flex-row flex-align-center">
-                    <div class="input-box">
-                        <input class="search-bar" type="text" name="search" id="headerSearchBar" placeholder="Search courses">
-                        <button class="search-btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <div class="w-60">
+                        <InputField 
+                        :inputInfo="inputInfo"
+                        />
                     </div>
                     <div class="btn-box">
                         <div class="icon-btn">
@@ -54,21 +55,32 @@
 </div>
 </template>
 
-<script>   
+<script>
+import InputField from '../child_components/InputField.vue';
 export default {
     name: 'HeaderSecond',
     data(){
         return{
-            showCategories: false
+            showCategories: false,
+            inputInfo:{   
+                type: 'text', 
+                placeholder: 'Search Courses',
+                id: 'searchBar',
+                icon: 'magnifying-glass',
+                btnText: ''
+            } 
         }
     },
     props:{
         categories: Array,
+    },
+    components:{
+        InputField
     }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @import '@/assets/scss/framework.scss';
 @import '@/assets/scss/global.scss';
 
@@ -81,43 +93,6 @@ export default {
 
     .drop-down-items{
         top:  25px;
-    }
-
-    .input-box{
-        margin-right: 30px;
-        .search-bar,
-        .search-btn{
-            height: 40px;
-            padding: 0 15px;
-        }
-
-        .search-bar{
-            width: 450px;
-            border: 1px solid $secondary-gray;
-            background-color: $secondary-gray;
-            color: $text-light;
-
-            &::placeholder{
-                color: $text-light;
-            }
-
-            &:active,
-            &:focus{
-                outline: none;
-            }
-        }
-
-        .search-btn{
-            border: 1px solid $secondary-blue;
-            background-color: $secondary-blue;
-            color: #fff;
-            cursor: pointer;
-
-            &:hover{
-                border: 1px solid $primary-blue;
-                background-color: $primary-blue;
-            }
-        }
     }
 }
 </style>

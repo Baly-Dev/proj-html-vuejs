@@ -8,7 +8,8 @@
         <MainFourthSection
         :courses="courses"
         :categories="categories"
-        />      
+        />
+        <MainFifthSection />
     </main>
 </template>
 
@@ -17,6 +18,7 @@ import MainFirstSection from './MainFirstSection.vue'
 import MainSecondSection from './MainSecondSection.vue';
 import MainThirdSection from './MainThirdSection.vue';
 import MainFourthSection from './MainFourthSection.vue';
+import MainFifthSection from './MainFifthSection.vue';
 
 export default {
     name: 'TheMain',
@@ -29,7 +31,8 @@ export default {
         MainFirstSection,
         MainSecondSection,
         MainThirdSection,
-        MainFourthSection
+        MainFourthSection,
+        MainFifthSection
     }
 }
 </script>
